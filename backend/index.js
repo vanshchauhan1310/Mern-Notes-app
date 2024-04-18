@@ -6,6 +6,9 @@ connectDB();
 const app = express();
 const port = 5003;
 
+app.use(express.json())
+
+// All Routes
 app.use('/api/auth',require('./routes/auth'))
 app.use('/api/notes',require('./routes/notes'))
 
